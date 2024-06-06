@@ -1,7 +1,7 @@
 export const kpis = [
     {
       _id: "63bf8239f03239e002001612",
-      totalProfit: "$213000.00",
+      totalProfit: "$214000.00",
       totalRevenue: "$283000.00",
       totalExpenses: "$71000.00",
       monthlyData: [
