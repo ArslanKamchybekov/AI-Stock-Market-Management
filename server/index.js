@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import kpiRoutes from "./routes/kpi.js"
+import KPI from "./models/KPI.js";
 
 /* CONFIGURATIONS */
 dotenv.config();
