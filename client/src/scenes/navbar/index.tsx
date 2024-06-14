@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {Link} from "react-router-dom";
 import { Box, Typography, useTheme } from "@mui/material";
-import FLexBetween from '@/components/FlexBetween';
+import FlexBetween from '@/components/FlexBetween';
 import PixIcon from "@mui/icons-material/pix";
 
 type Props = {};
@@ -10,21 +10,21 @@ const Navbar =  (props: Props) => {
     const { palette } = useTheme();
     const [seletected, setSelected] = useState ("dashboard");
     return (
-        <FLexBetween 
+        <FlexBetween 
          mb="0.25rem" 
          p= "0.5rem 0rem"  
          color={palette.grey[300]}
          
         >
             {/* LEFT SIDE */}
-            <FLexBetween gap = "0.75rem">
+            <FlexBetween gap = "0.75rem">
                 <PixIcon sx ={{fontSize: "28px"}} /> 
                 <Typography variant = "h4" fontSize = "16px">
                     Finanseer 
                 </Typography>
-            </FLexBetween>
+            </FlexBetween>
             {/* RIGHT SIDE*/}
-            <FLexBetween gap="2rem">
+            <FlexBetween gap="2rem">
                 <Box sx = {{"&:hover":{color: palette.primary[100]}}}>
                     <Link
                      to= "/"
@@ -49,8 +49,8 @@ const Navbar =  (props: Props) => {
                     predicitons
                     </Link>
                 </Box>
-            </FLexBetween>
-        </FLexBetween>
+            </FlexBetween>
+        </FlexBetween>
     );
 
 };
