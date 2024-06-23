@@ -46,7 +46,6 @@ export interface GetProductsResponse {
     createdAt: string;
     updatedAt: string;
 }
-// write your code above this
 
 export interface GetTransactionsResponse {
     id: string

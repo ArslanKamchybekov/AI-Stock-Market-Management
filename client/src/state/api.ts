@@ -1,6 +1,6 @@
 // i had to create this file to add the transaction routes
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
-import { GetKpisResponse, GetProductsResponse, GetTransactionsResponse } from "@/state/type";
+import { GetKpisResponse, GetProductsResponse, GetTransactionsResponse } from "./types";
 
 export const api = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL }),
@@ -9,7 +9,7 @@ export const api = createApi({
     endpoints: (build) => ({
         getKpis: build.query<Array<GetKpisResponse>, void>({
             query: () => "kpi/kpis/",
-            providesTags: ["Kpis"]
+            providesTags: ["Kpis"],
         }),
         getProducts: build.query<Array<GetProductsResponse>, void>({
             query: () => "product/products/",
@@ -18,8 +18,8 @@ export const api = createApi({
         getTransactions: build.query<Array<GetTransactionsResponse>, void>({
             query: () => "transaction/transactions/",
             providesTags: ["Transactions"],
-        })
-    })
+        }),
+    }),
 });
 
 
