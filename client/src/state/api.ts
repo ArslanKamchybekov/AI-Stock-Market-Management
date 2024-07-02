@@ -1,4 +1,3 @@
-// i had to create this file to add the transaction routes
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import { GetKpisResponse, GetProductsResponse, GetTransactionsResponse } from "./types";
 

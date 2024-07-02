@@ -1,5 +1,3 @@
-// write your code below this
-
 export interface ExpensesByCategory {
     salaries: number;
     supplies: number;
