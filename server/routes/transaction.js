@@ -31,7 +31,7 @@ router.get("/transactions", async (req, res) => {
 // Read a transaction by ID -- this is what i added (not from video)
 router.get("/transactions/:id", async (req, res) => {
     try {
-        const transaction = await TRANSACTION.findById(req.params.id);
+        const transaction = await Transaction.findById(req.params.id);
         if (!transaction) {
             return res.status(404).json({ message: "TRANSACTION not found" });
         }
@@ -56,7 +56,7 @@ router.patch("/transactions/:id", async (req, res) => {
     }
 
     try {
-        const transaction = await TRANSACTION.findById(req.params.id);
+        const transaction = await Transaction.findById(req.params.id);
         if (!transaction) {
             return res.status(404).json({ message: "TRANSACTION not found" });
         }
@@ -72,7 +72,7 @@ router.patch("/transactions/:id", async (req, res) => {
 // Delete a transaction by ID -- this is what i added (not from video) 
 router.delete("/transactions/:id", async (req, res) => {
     try {
-        const transaction = await TRANSACTION.findByIdAndDelete(req.params.id);
+        const transaction = await Transaction.findByIdAndDelete(req.params.id);
         if (!transaction) {
             return res.status(404).json({ message: "TRANSACTION not found" });
         }
