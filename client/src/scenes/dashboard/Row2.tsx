@@ -3,7 +3,6 @@ import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
 import { useGetKpisQuery, useGetProductsQuery } from "@/state/api";
 import { Box, Typography, useTheme } from "@mui/material";
-import React, { useMemo } from "react";
 import {
   Tooltip,
   CartesianGrid,
