@@ -49,6 +49,18 @@ const Navbar =  (props: Props) => {
                     predicitons
                     </Link>
                 </Box>
+                <Box>
+                    <Link
+                        to="/stocks"
+                        onClick={() => setSelected("stocks")}
+                        style={{
+                            color: seletected === "stocks" ? "inherit" : palette.grey[700],
+                            textDecoration: "inhereit"
+                        }}
+                    >
+                        stocks
+                    </Link>
+                </Box>
             </FlexBetween>
         </FlexBetween>
     );
